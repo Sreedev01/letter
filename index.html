@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>This one is for my Nanduuu</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="garden.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">/**</span><br />
+                <span class="space"/><span class="comments">*THE CODE OF OUR STORY</span><br />
+                <span class="space"/><span class="comments">*/</span><br />
+                We were in the same class,<br />
+                But the first time we talked... was on 07 May 2022.<br />
+                <span class="comments">// A Saturday. Maths extra class. CC Block.</span><br />
+                At the interval, while standing outside the class... we talked for the first time.<br />
+                <br />
+                Slowly... we began to send messages.<br />
+                Those texts became regular...<br />
+                And we became best friends.<br />
+                <br />
+                I still remember the day<br />
+                You brought me aloo bhujiya in a white cover...<br />
+                <span class="comments">// That cover still means a lot.</span><br />
+                <br />
+                Simple texts turned into long stories,<br />
+                Stories turned into late-night calls.<br />
+                I started sharing all my secrets with you...<br />
+                Time flew like seconds whenever we talked.<br />
+                <br />
+                I still remember your voice<br />
+                When you called me on your way back from Wonderla.<br />
+                I don’t know the exact moment I fell in love with you...<br />
+                It wasn’t sudden — it was slow and beautiful.<br />
+                <br />
+                Your absence... it felt like suffocation.<br />
+                I remember the day<br />
+                I held your hand for the first time and walked...<br />
+                Do you remember that moment too...?<br />
+                <br />
+                Then came the early morning of May 22, 2024.<br />
+                You texted me... then called me and said,<br />
+                <span class="comments">"I love you"</span> for the very first time.<br />
+                And I was speechless...<br />
+                <span class="comments">// I didn’t know how to say it back.</span><br />
+                <br />
+                On August 9, you accepted my proposal<br />
+                In a completely unexpected way.<br />
+                My heart skipped a beat.<br />
+                My breath trembled...<br />
+                <span class="comments">// And that’s when the life of love began.</span><br />
+                <br />
+                The gift you gave me on my birthday<br />
+                Was more than I ever expected.<br />
+                <span class="comments">// It meant the world to me.</span><br />
+                <br />
+                Touch the heart below<br />
+                <br />
+                <span id="heartspan">
+                    <a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+                </span>
+            </div>
+
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        OUR LOVE SINCE AUGUST 9, 2024
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        I LOVE YOU SO MUCH<br/>
+                        <div class="signature">- Puzhu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2024, 7, 9);     // August is month 7 (0-based)
+        together.setHours(23);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 5000);
+
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+</html>
